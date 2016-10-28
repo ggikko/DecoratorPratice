@@ -1,5 +1,7 @@
 package ggikko.me.decopraticeapp;
 
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Drawable dividerDrawable = ContextCompat.getDrawable(this, R.drawable.divider_test);
+
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view); //view binding - recyclerview
         recyclerView.setAdapter(new GgikkoApdater(makeMockData()));//set adapter
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)); // set layoutManager
-        recyclerView.addItemDecoration(new GgikkoDividerDecoration(this)); // set decorator
+        recyclerView.addItemDecoration(new GgikkoDividerDecoration(this, dividerDrawable)); // set decorator
     }
 
     private List<String> makeMockData() {
