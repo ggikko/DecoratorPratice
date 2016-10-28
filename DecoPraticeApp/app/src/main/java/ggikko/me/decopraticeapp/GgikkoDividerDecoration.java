@@ -12,11 +12,11 @@ import android.view.View;
  * Created by ggikko on 2016. 10. 28..
  */
 
-public class GgikkoDecoration extends RecyclerView.ItemDecoration {
+public class GgikkoDividerDecoration extends RecyclerView.ItemDecoration {
 
     private Drawable divider;
 
-    public GgikkoDecoration(Context context) {
+    public GgikkoDividerDecoration(Context context) {
         int[] attr = {android.R.attr.listDivider};
         final TypedArray a = context.obtainStyledAttributes(attr);
         divider = a.getDrawable(0);

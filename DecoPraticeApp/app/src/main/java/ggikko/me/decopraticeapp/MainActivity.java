@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view); //view binding - recyclerview
         recyclerView.setAdapter(new GgikkoApdater(makeMockData()));//set adapter
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)); // set layoutManager
-        recyclerView.addItemDecoration(new GgikkoDecoration(this)); // set decorator
+        recyclerView.addItemDecoration(new GgikkoDividerDecoration(this)); // set decorator
     }
 
     private List<String> makeMockData() {
